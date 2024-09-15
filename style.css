@@ -1,0 +1,102 @@
+.card-container {
+    overflow-y: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+  }
+  
+
+.para{
+    text-align: justify;
+    width: 550px;
+
+}
+.para2{
+    text-align:center;
+    width: 450px;
+}
+.slideshow-wrapper {
+    height: 600px; /* Set the height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+  
+  .slider .slide:nth-child(1) {
+    opacity: 1;
+    animation: fade 12s infinite;
+  }
+  
+  
+  .slider .slide:nth-child(2) {
+    animation: fade 12s infinite;
+    animation-delay: 3s;
+  }
+  
+  .slider .slide:nth-child(3) {
+    animation: fade 12s infinite;
+    animation-delay: 6s;
+  }
+  
+  .slider .slide:nth-child(4) {
+    animation: fade 12s infinite;
+    animation-delay: 9s;
+  }
+  
+  .radio-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .radio-buttons input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-buttons input[type="radio"] + label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .radio-buttons input[type="radio"]:checked + label {
+    background-color: #000;
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 1;
+    }
+  }
